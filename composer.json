@@ -1,0 +1,24 @@
+{
+    "name": "adrianorsouza/codeigniter-phpmailer",
+    "description": "CodeIgniter Mail Plugin Powered by PHPMailer Library",
+    "keywords": ["codeigniter","phpmailer", "mail library"],
+    "homepage": "https://github.com/adrianorsouza/codeigniter-phpmailer",
+
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adriano Rosa",
+            "email": "dev@adrianorosa.com",
+            "homepage": "http://adrianorosa.com"
+        }
+    ],
+
+    "require": {
+      "phpmailer/phpmailer": "v5.2.7",
+      "php": ">=5.2.4"
+    },
+
+    "autoload": {
+        "classmap": ["application/libraries/Mail.php"]
+    }
+}

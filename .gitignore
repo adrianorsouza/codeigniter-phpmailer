@@ -1,0 +1,13 @@
+
+system
+vendor
+
+.editorconfig
+*.log
+*.zip
+.DS_Store
+._*
+Thumbs.db
+.cache
+*.sublime-project
+*.sublime-workspace

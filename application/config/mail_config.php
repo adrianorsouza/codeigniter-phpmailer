@@ -2,10 +2,10 @@
 
 // Mailer Configuration
 $config['mail_mailer']          = 'PHPMailer';
-$config['mail_debug']           = 0; // default 0, debugging: 2, 'local'
+$config['mail_debug']           = 0; // default: 0, debugging: 2, 'local'
 $config['mail_debug_output']    = 'html';
 $config['mail_smtp_auth']       = true;
-$config['mail_smtp_secure']     = 'tls'; // tls | ssl | ''
+$config['mail_smtp_secure']     = ''; // default: '' | tls | ssl |
 $config['mail_charset']         = 'utf-8';
 
 // Templates Path and optional config

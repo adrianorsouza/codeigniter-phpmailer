@@ -44,5 +44,3 @@ To get your mail class up and running with PHPMailer you basically need to do th
 
 @TODO
 
-## Composer
-@TODO

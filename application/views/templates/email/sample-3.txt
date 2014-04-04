@@ -1,0 +1,10 @@
+Contact Form
+
+Name: %1$s
+Email: %2$s
+City: %3$s - %4$s
+DOB: %5$d/%6$d/%7$d
+Phone: %8$s
+
+Message:
+%9$s

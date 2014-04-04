@@ -1,0 +1,13 @@
+-----------------------------
+TEMPLATE TEXT/PLAIN
+-----------------------------
+{SITE_NAME}
+
+Hello {NAME}
+Your email address is: {EMAIL}
+
+{MESSAGE}
+
+{DATE}
+
+{SMALL_TEXT}

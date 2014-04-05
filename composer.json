@@ -1,10 +1,11 @@
 {
     "name": "adrianorsouza/codeigniter-phpmailer",
     "description": "CodeIgniter Mail Plugin Powered by PHPMailer Library",
-    "keywords": ["codeigniter","phpmailer", "mail library"],
+    "keywords": ["codeigniter","phpmailer", "mail"],
     "homepage": "https://github.com/adrianorsouza/codeigniter-phpmailer",
 
     "license": "MIT",
+
     "authors": [
         {
             "name": "Adriano Rosa",

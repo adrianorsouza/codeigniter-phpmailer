@@ -1,6 +1,6 @@
 #Codeigniter mail plugin powered by PHPMailer
 
-###A simple CodeIgniter Mail class to connect your application through the powerful PHPMailer library.
+###A simple CodeIgniter mail class to connect your application through the powerful PHPMailer library.
 
 Version: 0.1.2
 
@@ -8,17 +8,17 @@ Tested over CodeIgniter v2.1.4 / v3.0-dev and PHPMailer Version 5.2.7
 
 ##Install via Composer
 
-###To get this plugin via composer is the easiest way.
+###To get this plugin via composer is the quick start.
 
 This plugin utilizes Composer for its installation and PHPMailer dependency. If you haven't already, start by installing [Composer](http://getcomposer.org/doc/00-intro.md).
 
-The plugin is available via [Composer/Packagist](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) so to get this quick add the lines below to your composer.json
+And are available via [Composer/Packagist](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) so to get this quick add the lines below to your composer.json
 ```JSON
 "require" : {
     "adrianorsouza/codeigniter-phpmailer": "v0.1.2"
   }
 ```
-then cd into your project and run from the command line
+then cd into your project and run from the command line.
 ```CLI
 $ composer.phar install
 ```
@@ -41,14 +41,14 @@ If you don't speak Composer, follow this instructions:
 
 - Download this zip files and uncompress it within of your `application/` directory.
 
-- Download [PHPMailer files](https://github.com/Synchro/PHPMailer) dependencies *because is not include in this package*
+- Download [PHPMailer files](https://github.com/Synchro/PHPMailer) dependencies *because is not include in this package*.
   - PHPMailerAutoload.php
   - class.smtp.php
   - class.phpmailer.php
 
-place them into your `third_party` folder or `what/you/want` as long as you include PHPMailer autoloader where you call the class Mail().
+place them into your `third_party` folder or `what/you/want` as long as you include PHPMailer autoloader where you call the class `Mail()`.
 
-To load `Mail()` class use the same Codeigniter super-object:
+To load class `Mail()` use the same Codeigniter super-object:
 ```PHP
 $this->load->library('mail');
 ```
@@ -56,17 +56,17 @@ That's all.
 
 ##Configuration
 
-After get this plugin you have to setup mail_config.php file that contains all mail server configuration that must be placed in your `application/config/mail_config.php` folder.
+After get this plugin you have to setup `mail_config.php` file that contains all mail server configuration that must be placed in your `application/config/` folder.
 
 In order to be able to send emails from your local development either production server you must provide a valid SMTP account authentication.
 
 So in this config file, you setup your smtp server and password, login, mail from and etc...
 
-If you want to use a Gmail smtp account to send your emails, you must set the config `mail_smtp_secure` to `TLS`.
+To set up a Gmail smtp account to send your emails, you must set the config `mail_smtp_secure` to `TLS`.
 
-To send any message with a HTML template file place it into your views folder. The default folder is `views/templates/email` if you want to change it set this in mail_config.php as long as it remains under views folder.
+To send any message with a HTML template file place it into your views folder. The default folder is `views/templates/email` if you want to change it, set this in `mail_config.php` as long as it remains under views folder.
 
-### mail_config.php Sample
+###Sample mail_config.php
 ```PHP
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -117,7 +117,7 @@ $config['mail_setCc']           = false;
 
 ##Usage
 
-###Send a basic email message using a string as HTML.
+###Send a basic email message using a string as HTML body.
 ```PHP
 $data = '<h2>Sample Basic</h2>
          <hr>
@@ -165,7 +165,7 @@ Create a HTML template file and name it as `sample-2.html`.
 </table>
 ```
 
-Then set the a new mail message.
+Then set up a new mail message.
 ```PHP
 $data = array(
         "NAME"       => 'Juliet & Romeo',
@@ -182,15 +182,19 @@ $mail->setMailBody($data, $template_html);
 $mail->sendMail('Awesome Subject', 'someone@example.com');
 ```
 
-More examples you can find in file Sample_controller.php at `application/controllers` folder
+More examples you can find in file `Sample_controller.php` at `application/controllers` folder
 
 This class is capable to send email message by passing an array as body content, external template HTML/TEXT file or as string.
 
-If you don't set a mail-to the default config `mail_replyto_mail` set in your `mail_config.php` will be used instead.
+If you don't pass an email address as a parameter `$to` to  `sendMail($Subject, $to);` methods by default `$to` will be defined with your config `mail_replyto_mail` value.
 
-You can pass any config from the mail_config.php into class constructor as an array of values:
+You can pass any config from the `mail_config.php` into class constructor as an array of values:
 ```PHP
-$config = array('mail_bcc'=>'my_email@example.com', 'mail_setBcc'=>true);
+$config = array(
+            'mail_bcc'=>'my_email@example.com',
+            'mail_setBcc'=>true
+          );
+
 $mail = new Mail($config);
 ```
 this will enable BCC e send a copy as BCC to address my_email@example.com
@@ -213,8 +217,8 @@ Have you found a bug? Please open a [new issue](https://github.com/adrianorsouza
 Adriano Rosa
   - https://twitter.com/adrianorosa
 
-###More About PHPMailer
+###Further reading about PHPMailer
 https://github.com/Synchro/PHPMailer
 
-###More About CodeIgniter
+###Further reading about CodeIgniter
 http://ellislab.com/codeigniter

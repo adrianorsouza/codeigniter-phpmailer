@@ -261,21 +261,25 @@ class Mail extends PHPMailer
    public function local_debug()
    {
       if ( $this->SMTPDebug === 'local' ) {
-         $from = $this->From;
-         $mailto = $this->to[0][0];
-         $subject = $this->Subject;
          $html = "
-                  <div style=\"margin:20px; float:left; width:45%\">
-                     <h3>Html Format:</h3>
-                     <pre>Subject: {$subject}\nFrom:{$from}\nMailto: {$mailto}</pre><hr>
-                     {$this->Body}
-                  </div>
-
-                  <div style=\"margin:20px; float:right; width:45%; word-wrap:break-word;\">
-                     <h3>Plain/text Format:</h3>
-                     <pre>Subject: {$subject}\nFrom:{$from}\nMailto: {$mailto}</pre><hr>
-                     <pre>{$this->AltBody}</pre>
-                  </div>";
+<div style=\"margin:0 20px; clear:both; word-wrap:break-word;\">
+<pre>
+<strong>From: {$this->from_name} &lt;{$this->from_mail}&gt</strong>
+To: {$this->to[0][1]} &lt;{$this->to[0][0]}&gt;
+<span style=\"color:#999\">Reply-To: {$this->replyto_name} &lt;{$this->replyto_mail}&gt;</span>
+Subject: {$this->Subject}
+</pre>
+</div>
+<div style=\"margin:20px; float:left; width:45%\">
+<h2>Html Format:</h2>
+<hr>
+{$this->Body}
+</div>
+<div style=\"margin:20px; float:right; width:45%; word-wrap:break-word;\">
+<h2>Plain/text Format:</h2>
+<hr>
+<pre>{$this->AltBody}</pre>
+</div>";
 
          print_r($html); exit();
       }

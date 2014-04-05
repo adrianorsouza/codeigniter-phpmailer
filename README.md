@@ -12,21 +12,15 @@ Tested over CodeIgniter v2.1.4 / v3.0-dev and PHPMailer Version 5.2.7
 
 This plugin utilizes Composer for its installation and PHPMailer dependency. If you haven't already, start by installing [Composer](http://getcomposer.org/doc/00-intro.md).
 
-And are available via [Composer/Packagist](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) so to get this quick add the lines below to your composer.json
-```JSON
-"require" : {
-    "adrianorsouza/codeigniter-phpmailer": "v0.1.2"
-  }
-```
-then cd into your project and run from the command line.
+And are available via [Composer/Packagist](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer). Once you have Composer configured in your environment run the command line:
 ```CLI
-$ composer.phar install
+  $ composer require "adrianorsouza/codeigniter-phpmailer:v0.1.2"
 ```
-This command will download and place this project files and PHPMailer dependencies into your ``vendor`` folder.
+This command will write into composer.json beyond download and place this project files and PHPMailer dependencies into your ``vendor`` folder.
 
 If you have not included the composer autoload you must do it at the very top of your index.php page or whatever you are running this plugin.
 ```PHP
-require_once dirname(__DIR__) .'/vendor/autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 ```
 that's all. Your able to send e-mail anywhere inside your CodeIgniter application.
 

@@ -107,6 +107,10 @@ class Mail extends PHPMailer
    {
       if ( !is_array($data) && $template_html == null ) {
 
+         if ( $format == 'TEXT' ) {
+            $this->isHTML = false;
+            return $this->textBody = $data;
+         }
          return $this->htmlBody = $data;
 
       } elseif ( is_array($data) && $template_html == null ) {

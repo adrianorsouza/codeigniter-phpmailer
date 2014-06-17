@@ -2,7 +2,7 @@
 
 ###A simple CodeIgniter mail class to connect your application through the powerful PHPMailer library.
 
-Version: 0.1.2
+Version: 0.1.3
 
 Tested over CodeIgniter v2.1.4 / v3.0-dev and PHPMailer Version 5.2.7
 
@@ -14,7 +14,7 @@ This plugin utilizes Composer for its installation and PHPMailer dependency. If 
 
 And are available via [Composer/Packagist](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer). Once you have Composer configured in your environment run the command line:
 ```CLI
-  $ composer require "adrianorsouza/codeigniter-phpmailer:v0.1.2"
+  $ composer require "adrianorsouza/codeigniter-phpmailer:v0.1.*"
 ```
 This command will write into composer.json beyond download and place this project files and PHPMailer dependencies into your ``vendor`` folder.
 

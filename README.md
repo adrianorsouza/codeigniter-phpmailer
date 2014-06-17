@@ -14,7 +14,7 @@ This plugin utilizes Composer for its installation and PHPMailer dependency. If 
 
 And are available via [Composer/Packagist](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer). Once you have Composer configured in your environment run the command line:
 ```CLI
-  $ composer require "adrianorsouza/codeigniter-phpmailer:v0.1.*"
+  $ composer require "adrianorsouza/codeigniter-phpmailer:0.1.*"
 ```
 This command will write into composer.json beyond download and place this project files and PHPMailer dependencies into your ``vendor`` folder.
 

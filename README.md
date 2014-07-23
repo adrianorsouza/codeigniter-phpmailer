@@ -2,7 +2,7 @@
 
 ###A simple CodeIgniter mail class to connect your application through the powerful PHPMailer library.
 
-Version: 0.1.3
+[![Latest Stable Version](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/v/stable.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) [![Total Downloads](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/downloads.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) [![Latest Unstable Version](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/v/unstable.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) [![License](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/license.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer)
 
 Tested over CodeIgniter v2.1.4 / v3.0-dev and PHPMailer Version 5.2.7
 

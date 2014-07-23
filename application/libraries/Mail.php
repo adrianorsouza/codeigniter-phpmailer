@@ -122,8 +122,14 @@ class Mail extends PHPMailer
          $templatePath = ($this->TemplateFolder)
                ? $this->TemplateFolder . '/' . $template_html
                : $template_html;
+         // Support load different path to views available in CI v3.0
+         if ( defined('VIEWPATH') ) {
+            $views_path = VIEWPATH;
+         } else {
+            $views_path = APPPATH .'views/';
+         }
 
-         if ( !file_exists( APPPATH .'views/'.$templatePath ) ) {
+         if ( !file_exists( $views_path . $templatePath ) ) {
 
             log_message('error','setEmailBody() HTML template file not found: ' . $template_html);
             return $this->htmlBody = 'Template ' . ($template_html) . ' not found.'; //'none template message found in: ' .$template_html;
@@ -140,7 +146,7 @@ class Mail extends PHPMailer
 
                $templateTextPath = preg_replace('/\.[html|php|htm]+$/', '.txt', $templatePath);
 
-               if ( file_exists( APPPATH . 'views/' . $templateTextPath ) ) {
+               if ( file_exists( $views_path . $templateTextPath ) ) {
 
                   $this->textBody = $this->CI->load->view($templateTextPath, '', true);
                }

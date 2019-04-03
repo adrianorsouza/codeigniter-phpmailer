@@ -10,6 +10,7 @@ vendor
 
 .editorconfig
 *.log
+*.lock
 *.zip
 .DS_Store
 ._*

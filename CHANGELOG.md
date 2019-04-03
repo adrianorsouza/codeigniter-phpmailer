@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.1.5 (2019-04-03)
+------------------
+* Minor fixes
+* drop composer.lock
+
 0.1.4 (2014-07-23)
 ------------------
 * Added support to load different path for template views (this feature is only available in CI v3.0)

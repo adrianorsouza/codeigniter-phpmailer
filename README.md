@@ -1,14 +1,15 @@
-#Codeigniter mail plugin powered by PHPMailer
+Codeigniter mail plugin powered by PHPMailer
+============================================
 
-###A simple CodeIgniter mail class to connect your application through the powerful PHPMailer library.
+### A simple CodeIgniter mail class to connect your application through the powerful PHPMailer library.
 
 [![Latest Stable Version](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/v/stable.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) [![Total Downloads](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/downloads.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) [![Latest Unstable Version](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/v/unstable.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer) [![License](https://poser.pugx.org/adrianorsouza/codeigniter-phpmailer/license.svg)](https://packagist.org/packages/adrianorsouza/codeigniter-phpmailer)
 
 Tested over CodeIgniter v2.1.4 / v3.0-dev and PHPMailer Version 5.2.7
 
-##Install via Composer
+## Install via Composer
 
-###To get this plugin via composer is the quick start.
+### To get this plugin via composer is the quick start.
 
 This plugin utilizes Composer for its installation and PHPMailer dependency. If you haven't already, start by installing [Composer](http://getcomposer.org/doc/00-intro.md).
 
@@ -29,7 +30,7 @@ To create an instance of `Mail()` class:
  $mail = new Mail();
 ```
 
-##Alternatively manual installation
+## Alternatively manual installation
 
 If you don't speak Composer, follow this instructions:
 
@@ -48,7 +49,7 @@ $this->load->library('mail');
 ```
 That's all.
 
-##Configuration
+## Configuration
 
 After get this plugin you have to setup `mail_config.php` file that contains all mail server configuration that must be placed in your `application/config/` folder.
 
@@ -60,7 +61,7 @@ To set up a Gmail smtp account to send your emails, you must set the config `mai
 
 To send any message with a HTML template file place it into your views folder. The default folder is `views/templates/email` if you want to change it, set this in `mail_config.php` as long as it remains under views folder.
 
-###Sample mail_config.php
+### Sample mail_config.php
 ```PHP
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -109,9 +110,9 @@ $config['mail_setCc']           = false;
 
 ```
 
-##Usage
+## Usage
 
-###Send a basic email message using a string as HTML body.
+### Send a basic email message using a string as HTML body.
 ```PHP
 $data = '<h2>Sample Basic</h2>
          <hr>
@@ -123,7 +124,7 @@ $mail->setMailBody($data);
 $mail->sendMail('Awesome Subject', 'someone@example.com');
 ```
 
-###Send email message as an external HTML template
+### Send email message as an external HTML template
 ```PHP
 $data = null;
 $template_html = 'sample-1.html'; //views/templates/mail/
@@ -133,7 +134,7 @@ $mail->setMailBody($data, $template_html);
 $mail->sendMail('Awesome Subject', 'someone@example.com');
 ```
 
-###Send email message as an associative array with external HTML template
+### Send email message as an associative array with external HTML template
 Create a HTML template file and name it as `sample-2.html`.
 
 ```HTML
@@ -193,7 +194,7 @@ $mail = new Mail($config);
 ```
 this will enable BCC e send a copy as BCC to address my_email@example.com
 
-####Notes
+#### Notes
 1. If you are not in Composer instead of create new instance class ie: `$mail = new Mail();` just load class normally with:
 `$this->load->library('mail');` and use the super object `$this->mail->sendMail();` instead.
 
@@ -204,15 +205,15 @@ ending with .txt extension write it only text with your needs and the Mail plugi
 
 2. Fell free to custom this plugin with your needs.
 
-###Bugs
+### Bugs
 Have you found a bug? Please open a [new issue](https://github.com/adrianorsouza/codeigniter-phpmailer/issues).
 
-###Author
+### Author
 Adriano Rosa
-  - https://twitter.com/adrianorosa
+  - https://adrianorosa.com
 
-###Further reading about PHPMailer
+### Further reading about PHPMailer
 https://github.com/Synchro/PHPMailer
 
-###Further reading about CodeIgniter
+### Further reading about CodeIgniter
 http://ellislab.com/codeigniter
